@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
+// ./assets/instascan.min.js
+
 // https://github.com/schmich/instascan
 declare var Instascan: any;
 

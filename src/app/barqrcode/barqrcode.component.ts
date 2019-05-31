@@ -2,6 +2,11 @@ import { Component, VERSION, OnInit, ViewChild} from '@angular/core';
 
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
+/**
+ * "@zxing/library": "^0.11.0",
+ *  "@zxing/ngx-scanner": "^1.5.1"
+ */
+
 @Component({
   selector: 'app-barqrcode',
   templateUrl: './barqrcode.component.html',
