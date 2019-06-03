@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'barqrcodescanner';
+
+  // tslint:disable-next-line:variable-name
+  _typeCam: string;
+
+  setType(typeCam: string): void {
+    this._typeCam = typeCam;
+  }
+
 }

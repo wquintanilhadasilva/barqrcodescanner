@@ -3,9 +3,30 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <app-qrcode></app-qrcode>
-  <app-barcode></app-barcode>
-  <app-barqrcode></app-barqrcode>
+  <button (click)="_typeCam = 'qr'">QR Code</button>
+  <button (click)="_typeCam = 'bc'">Bar Code</button>
+  <button (click)="_typeCam = 'bcqr'">Bar & QR Code</button>
+  <button (click)="_typeCam = ''">Nenhum</button>
+
+  <div [ngSwitch]="_typeCam">
+
+    <div *ngSwitchCase="'qr'">
+      <app-qrcode></app-qrcode>
+    </div>
+
+    <div *ngSwitchCase="'bc'">
+      <app-barcode></app-barcode>
+    </div>
+
+    <div *ngSwitchCase="'bcqr'">
+      <app-barqrcode></app-barqrcode>
+    </div>
+
+    <div *ngSwitchDefault>
+      <h1>Nenhuma opção escolhida!</h1>
+    </div>
+
+  </div>
 </div>
 
 <router-outlet></router-outlet>
